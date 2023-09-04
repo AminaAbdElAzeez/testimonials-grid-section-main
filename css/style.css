@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+:root {
+    --moderateviolet: hsl(263, 55%, 52%);
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --veryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --lightGray: hsl(0, 0%, 81%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+    --violet: hsl(263, 55%, 65%);
+
+}
+
+/* Cards Section */
+.cards {
+    background-color: var(--lightGrayishBlue);
+    padding: 120px 0;
+}
+.cards .container {
+    width: 75%;
+    margin: auto;
+}
+.cards .cards-content {
+    display: grid;
+    grid-template-areas:
+    "item-1 item-1 item-1 item-2 item-5"
+    "item-3 item-4 item-4 item-4 item-5" 
+    ;
+    gap: 30px;
+}
+.cards .cards-content .cards-item {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 25px 19px 20px 19px;
+}
+.cards .cards-content .cards-item .top {
+    display: flex;
+}
+.cards .cards-content .cards-item .top > img {
+    margin: -2px 12px 15px 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid var(--violet);
+}
+.cards .cards-content .cards-item:first-child {
+    grid-area: item-1;
+    background-color: var(--moderateviolet);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 81% 0%;
+}
+.cards .cards-content .cards-item:nth-child(2) {
+    grid-area: item-2;
+    background-color: var(--veryDarkGrayishBlue);
+}
+.cards .cards-content .cards-item:nth-child(3) {
+    grid-area: item-3;
+    background-color: var(--White);
+}
+.cards .cards-content .cards-item:nth-child(4) {
+    grid-area: item-4;
+    background-color: var(--veryDarkBlackishBlue);
+}
+.cards .cards-content .cards-item:last-child {
+    grid-area: item-5;
+    background-color: var(--White);
+}
+.cards .cards-content .cards-item:first-child .cards-item-title,
+.cards .cards-content .cards-item:nth-child(2) .cards-item-title,
+.cards .cards-content .cards-item:nth-child(4) .cards-item-title {
+    color: var(--lightGray);
+}
+.cards .cards-content .cards-item:first-child .cards-item-title + span,
+.cards .cards-content .cards-item:nth-child(2) .cards-item-title + span ,
+.cards .cards-content .cards-item:nth-child(4) .cards-item-title + span {
+    color: var(--lightGray);
+    opacity: 50%;
+}
+.cards .cards-content .cards-item:nth-child(3) .cards-item-title,
+.cards .cards-content .cards-item:nth-child(5) .cards-item-title {
+    color: var(--veryDarkGrayishBlue);
+}
+.cards .cards-content .cards-item:nth-child(3) .cards-item-title + span ,
+.cards .cards-content .cards-item:nth-child(5) .cards-item-title + span {
+    color: var(--veryDarkBlackishBlue);
+    opacity: 50%;
+}
+.cards .cards-content .cards-item:first-child .bottom > h3,
+.cards .cards-content .cards-item:nth-child(2) .bottom > h3,
+.cards .cards-content .cards-item:nth-child(4) .bottom > h3 {
+    color: var(--White);
+    font-weight: 100;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.cards .cards-content .cards-item:nth-child(3) .bottom > h3,
+.cards .cards-content .cards-item:nth-child(5) .bottom > h3 {
+    color: var(--veryDarkBlackishBlue);
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.cards .cards-content .cards-item:first-child .bottom > p,
+.cards .cards-content .cards-item:nth-child(2) .bottom > p,
+.cards .cards-content .cards-item:nth-child(4) .bottom > p {
+    color: var(--lightGray);
+    opacity: 70%;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.cards .cards-content .cards-item:nth-child(2) .bottom > p {
+    padding: 0 7px;
+}
+.cards .cards-content .cards-item:nth-child(3) .bottom > p,
+.cards .cards-content .cards-item:nth-child(5) .bottom > p {
+    color: var(--veryDarkGrayishBlue);
+    opacity: 70%;
+    line-height: 1.5;
+}
+.cards .cards-content .cards-item:nth-child(5) .bottom > p {
+    padding: 0 7px;
+}
+
+@media (max-width:1199px) {
+    .cards {
+        width: 100%;
+        padding: 80px 0;
+    }
+    .cards .cards-content {
+        grid-template-areas: 
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4"
+        "item-5";
+    }
+}
